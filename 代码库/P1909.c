@@ -1,30 +1,3 @@
-//#include<stdio.h>
-//#include<math.h>
-//
-//int main()
-//{
-//	int a,b,c,m,n;
-//	int s[3];
-//	scanf("%d",&a);
-//	for(int i = 0;i < 3;i++)
-//	{
-//		scanf("%d %d",&b,&c);
-//		m = ceil(a/b);
-//		n = m * c;
-//		s[i] = n;
-//	}
-//	int min = s[0];
-//	for(int j = 1;j < 3;j++)
-//	{
-//		if(s[j] < s[0]){
-//			min = s[j];
-//		}
-//	}
-//	printf("%d",min);
-//		
-//	return 0;
-//}
-
 #include<stdio.h>  
 #include<math.h> 
 #include<limits.h> 
