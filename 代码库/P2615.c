@@ -5,22 +5,21 @@ int main() {
     int n;
     scanf("%d", &n);
     int square[n][n];
-    memset(square, 0, sizeof(square)); // 初始化幻方为0
+    memset(square, 0, sizeof(square));
 
-    int row = 0, col = n / 2; // 从第一行中间的位置开始
+    int row = 0, col = n / 2;
     for (int num = 1; num <= n * n; num++) {
         square[row][col] = num;
-        int new_row = (row - 1 + n) % n; // 计算新的行
-        int new_col = (col + 1) % n; // 计算新的列
-        if (square[new_row][new_col]) { // 如果新的位置已经被填充
-            row = (row + 1) % n; // 则将数字填在下一行
-        } else { // 否则
-            row = new_row; // 更新行
-            col = new_col; // 更新列
+        int new_row = (row - 1 + n) % n;
+        int new_col = (col + 1) % n;
+        if (square[new_row][new_col]) {
+            row = (row + 1) % n;
+        } else {
+            row = new_row;
+            col = new_col;
         }
     }
 
-    // 打印幻方
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             printf("%d ", square[i][j]);
